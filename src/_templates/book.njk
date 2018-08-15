@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block title %} {% endblock title %}
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/bootstrap.js"></script>
+    <script src="js/libs/mustache.js"></script>
+    <script src="js/libs/jquery-ui.js"></script>
+
+</head>
+
+
+<body class="bg-light">
+
+<div class="container">
+    {% include "partials/modal-login.njk" %}
+    {% include "partials/counter.njk" %}
+    {% include "partials/form.njk" %}
+
+    <div class="books">
+        {% include "partials/book-item.njk" %}
+    </div>
+
+
+</div>
+    {% block scripts %}
+
+ <!--      <script src="js/all.js"></script> -->
+    <script src="js/modules/mediator.js"></script>
+    <script src="js/modules/cookie.js"></script>
+    <script src="js/modules/usersData.js"></script>
+    <script src="js/modules/userAuthorizationController.js"></script>
+    <script src="js/modules/booksData.js"></script>
+    <script src="js/modules/bookCounter.js"></script>
+    <script src="js/modules/bookController.js"></script>
+    <script src="js/modules/userSession.js"></script>
+
+    {% endblock scripts %}
+</body>
